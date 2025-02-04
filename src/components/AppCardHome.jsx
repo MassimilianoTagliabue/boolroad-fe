@@ -9,7 +9,7 @@ function AppCardHome({ curViaggio }) {
             <div className="card container-grid" style={{ backgroundImage: `url(${curViaggio.immagine})` }}>
                 <div className="card-body">
                     <h3 >Viaggio a {curViaggio.meta}</h3> <hr />
-                    <div className="d-flex">
+                    <div className="d-flex justify-content-between">
                         <div className="detail-card">
                             <h4>Dettagli viaggio</h4>
                             <span>Data di partenza: {curViaggio.partenza}</span> <br />
@@ -17,7 +17,7 @@ function AppCardHome({ curViaggio }) {
                             <span>Numero di partecipanti: {curViaggio.partecipanti.length}</span> <br />
                             <span>Tutor del gruppo: {curViaggio.tutor}</span>
                         </div>
-                        <div className="member-card">
+                        <div className="member-card ">
                             <h4>Elenco dei partecipanti</h4>
                             <ul>
                                 {viaggiatori.map((curViaggiatore) => {
@@ -27,8 +27,8 @@ function AppCardHome({ curViaggio }) {
                                 })}
                             </ul>
                         </div>
-                        <div className="align-content-center mx-4">
-                        <Link to={`/travel/${curViaggio.id}`} className="btn btn-primary button-detail">Visualizza dettagli</Link>
+                        <div className="align-content-center  mx-4">
+                            <Link to={`/travel/${curViaggio.id}`} className="btn ms-toggle-btn button-detail">Dettagli</Link>
                         </div>
                     </div>
                 </div>

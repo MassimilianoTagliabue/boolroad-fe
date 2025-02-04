@@ -9,7 +9,7 @@ const viaggi = [
         ritorno: "2025-02-05",
         immagine: "/images/roma.webp",
         tutor: "Mario Rossi",
-        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],
+        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18 , 34, 23]
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const viaggi = [
         ritorno: "2025-02-10",
         immagine: "images/parigi.jpg",
         tutor: "Anna Bianchi",
-        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],
+        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18]
     },
 
     // Viaggi futuri
@@ -29,7 +29,7 @@ const viaggi = [
         ritorno: "2025-06-30",
         immagine: "images/tokyo.jpg",
         tutor: "Francesca Rizzo",
-        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],
+        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18, 7, 43, 24]
     },
     {
         id: 4,
@@ -38,7 +38,8 @@ const viaggi = [
         ritorno: "2025-07-25",
         immagine: "images/new_york.jpg",
         tutor: "Stefano De Luca",
-       partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],},
+       partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18]
+    },
     {
         id: 5,
         meta: "Sydney",
@@ -46,7 +47,8 @@ const viaggi = [
         ritorno: "2025-09-05",
         immagine: "images/sydney.jpg",
         tutor: "Martina Ferrari",
-        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],},
+        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18, 50, 7, 14]
+    },
     {
         id: 6,
         meta: "Dubai",
@@ -54,7 +56,7 @@ const viaggi = [
         ritorno: "2025-09-30",
         immagine: "images/dubai.jpg",
         tutor: "Alessandro Moretti",
-        partecipanti_id: [10, 15, 29, 4, 12, 6, 21, 14, 8, 18],
+        partecipanti_id: [2, 34, 27, 15, 8, 28, 45, 13, 11, 6, 37]
     }
 ];
 

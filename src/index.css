@@ -1,16 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .ms-bg-page{
   background-color: #3c11d8;
 }
 
 .ms-bg-navbar{
-  background-color: #4a63ff;
+  background-color: #4e5cfb;
 }
 
 .ms-border-green{
   border: 2px solid #00ba06;
 }
+
 .ms-tx-white{
 color: white;
+}
+
+.ms-mar-bot{
+  margin-bottom: 70px;
 }
 
 .ms-card {
@@ -60,11 +71,6 @@ color: white;
   }
 
   /* PB */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   .nav-link-elem {
     position: relative;
@@ -167,8 +173,9 @@ color: white;
   
   .container-grid .button-detail {
     height: 50px;
-    line-height: 35px;
-    border-radius: 30px;
+    line-height: 25px;
+    border-radius: 25px;
+    padding: 10px 20px;
   }
   
   #title-home-page {
@@ -198,3 +205,33 @@ color: white;
     text-decoration: none;
     color: inherit;
   }
+  
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;  
+}
+
+.page-content {
+  flex-grow: 1; 
+}
+
+footer {
+  margin-top: auto; 
+}
+
+
+
+
+@media screen and (max-width:768px){
+
+  .member-card{
+    display: none;
+  }
+
+ .ms-align-center {
+  align-content: flex-start;
+ }
+  
+
+}

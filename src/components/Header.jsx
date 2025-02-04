@@ -20,7 +20,7 @@ function AppHeader() {
                     {/* LOGO E BRAND */}
                         <div className="d-flex align-items-center">
                             <NavLink className="nav-link active" to={`/`}>
-                            <img src="images/logoBoo.png" alt="" style={{ width: "7%", backgroundColor: "none" }} />
+                            <img src="/images/logo.jpg" alt="" style={{ width: "7%", backgroundColor: "none" }} />
                             <span className="fs-4 text-light">Boolroad</span>
                             </NavLink>
                         </div>

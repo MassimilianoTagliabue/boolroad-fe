@@ -1,19 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const SearchBar = ({ partecipanti, setfilteredPartecipanti, OrderBy, setOrderBy }) => {
-    const [searchTerm, setSearchTerm] = useState('')
-
-    const handleSearch = () => {
-
-        let filtered = partecipanti.filter(p => 
-            p.nome.toLowerCase().includes(searchTerm.toLowerCase()) || 
-            p.cognome.toLowerCase().includes(searchTerm.toLowerCase())
-        )   
-        setfilteredPartecipanti(filtered)
-    }
-
-    
-
+const SearchBar = ({ searchTerm, setSearchTerm, orderBy, setOrderBy, handleSearch }) => {
     return (
         <div className="container mt-3">
             <input
@@ -23,13 +10,12 @@ const SearchBar = ({ partecipanti, setfilteredPartecipanti, OrderBy, setOrderBy 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <select className="form-select mb-2" value={OrderBy}
-                onChange={(e) => setOrderBy(e.target.value)}>
+            <select className="form-select mb-2" value={orderBy} onChange={(e) => setOrderBy(e.target.value)}>
                 <option value="none">Nessun ordinamento</option>
                 <option value="nome">Ordina per Nome</option>
                 <option value="cognome">Ordina per Cognome</option>
             </select>
-            <button onClick={handleSearch}>Cerca</button>
+            <button onClick={handleSearch} className="ms-toggle-btn">Cerca</button>
         </div>
     );
 };

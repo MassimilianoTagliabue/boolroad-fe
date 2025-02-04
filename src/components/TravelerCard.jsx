@@ -20,6 +20,7 @@ function TravelerCard({ traveler }) {
         <div className="ms-card-details">
           <p>Email: {traveler.email}</p>
           <p>Telefono: {traveler.nome}</p>
+          <p>Codice codice fiscale: {traveler.codiceFiscale}</p>
         </div>
       )}
     </div>
