@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import AppLayout from "./layout/AppLayout"
-import Homepage from "./pages/Homepage"
+import HomePage from "./pages/Homepage"
 import SingleTravel from "./pages/SingleTravel"
 import CreaViaggio from "./pages/CreaViaggio"
 
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route index element={<Homepage />} />
+            <Route index element={<HomePage />} />
             <Route path="/travel">
               <Route path=":id" element={<SingleTravel />} />
             </Route>

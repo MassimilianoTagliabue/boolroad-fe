@@ -1,4 +1,17 @@
+.ms-bg-page{
+  background-color: #3c11d8;
+}
 
+.ms-bg-navbar{
+  background-color: #4a63ff;
+}
+
+.ms-border-green{
+  border: 2px solid #00ba06;
+}
+.ms-tx-white{
+color: white;
+}
 
 .ms-card {
     width: 300px;
@@ -24,7 +37,7 @@
   
   .ms-toggle-btn {
     padding: 5px 10px;
-    background-color: #4CAF50;
+    background-color: #00ba06;
     color: white;
     border: none;
     cursor: pointer;
@@ -32,7 +45,7 @@
   }
   
   .ms-toggle-btn:hover {
-    background-color: #45a049;
+    background-color: #17ad1e;
   }
   
   /* Dettagli nascosti inizialmente */
@@ -44,4 +57,144 @@
     margin: 5px 0;
     font-size: 16px;
     color: #555;
+  }
+
+  /* PB */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav-link-elem {
+    position: relative;
+    color: white; /* Testo bianco */
+    text-decoration: none; /* Rimuove sottolineatura predefinita */
+    padding: 5px 0; /* Un po' di spazio per la barra sotto */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link-elem::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Altezza della barra */
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link-elem:hover::after,
+  .nav-link-elem.active::after {
+    background-color: white; /* Barra completamente bianca all'hover e quando attivo */
+    width: 100%;
+  }
+  
+  .nav-link-elem.active {
+    font-weight: 600; /* Puoi rimuoverlo se non vuoi un testo più marcato */
+  }
+  
+  .card {
+    position: relative; /* Necessario per posizionare gli elementi sovrapposti */
+    width: 100%; /* Imposta la larghezza della card */
+    height: 370px; /* Imposta un'altezza per la card */
+    background-size: cover; /* Copre tutta la card con l'immagine di sfondo */
+    background-position: center; /* Centra l'immagine */
+    overflow: hidden; /* Impedisce di visualizzare eventuali parti dell'immagine fuori dalla card */
+  }
+  
+  .card-body {
+    position: absolute; /* Posiziona il contenuto sopra l'immagine */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente per migliorare la leggibilità */
+    color: white; /* Colore del testo */
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1; /* Posiziona il contenuto sopra l'immagine */
+  }
+  
+  .card-body h3, 
+  .card-body h4, 
+  .card-body span {
+    margin: 10px 0;
+  }
+  
+  .detail-card {
+    width: 30%;
+  }
+  
+  .detail-card span {
+    display: inline-block;
+  };
+  
+  .member-card {
+    max-width: 50%;
+  }
+  
+  .member-card ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .member-card li {
+    font-size: 16px;
+    color: white;
+  }
+  
+  .container-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container-grid .member-card {
+    width: 50%;
+  }
+  
+  .container-grid .detail-card {
+    width: 30%;
+    max-height: 240px;
+  }
+  
+  .container-grid .button-detail {
+    height: 50px;
+    line-height: 35px;
+    border-radius: 30px;
+  }
+  
+  #title-home-page {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .bg-color {
+    background-color: rgba(58, 0, 208, 1);
+    color: white;
+    padding-bottom: 100px;
+  }
+  
+  .bg-color-nav {
+    background-color: rgb(77, 88, 247);
+  }
+  
+  .secondary-title {
+    padding: 20px 0;
+  }
+  
+  #root {
+    display: grid;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
   }

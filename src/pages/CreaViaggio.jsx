@@ -15,7 +15,7 @@ function CreaViaggio() {
     };
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4 ms-tx-white">
             <h2>Crea un Nuovo Viaggio</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -57,7 +57,7 @@ function CreaViaggio() {
                         onChange={(e) => setTutor(e.target.value)} 
                     />
                 </div>
-                <button type="submit" className="btn btn-success">Salva Viaggio</button>
+                <button type="submit" className="ms-toggle-btn">Salva Viaggio</button>
             </form>
         </div>
     );

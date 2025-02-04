@@ -9,7 +9,7 @@ function TravelerCard({ traveler }) {
   };
 
   return (
-    <div className="ms-card">
+    <div className="ms-card ms-border-green">
       <div className="ms-card-header">
         <h2>{traveler.nome} {traveler.cognome}</h2>
         <button onClick={toggleDetails} className="ms-toggle-btn">

@@ -26,13 +26,13 @@ function SingleTravel() {
 
     useEffect(() => {
         let sortedPartecipanti = [...filteredPartecipanti];
-    
+
         if (orderBy === "nome") {
             sortedPartecipanti.sort((a, b) => a.nome.localeCompare(b.nome));
         } else if (orderBy === "cognome") {
             sortedPartecipanti.sort((a, b) => a.cognome.localeCompare(b.cognome));
         }
-    
+
         setfilteredPartecipanti(sortedPartecipanti);
     }, [orderBy]);
 
@@ -42,18 +42,26 @@ function SingleTravel() {
     return (
         <>
             <div className="container">
-                   {/* Titolo e Bottone */}
+                {/* Titolo e Bottone */}
                 <div className="d-flex justify-content-between align-items-center mt-3">
-                  <h2 className="text-center mt-3">Destinazione</h2>
-                 <button className="btn btn-primary" onClick={() => navigate("/crea-viaggio")}>
-                    + Nuovo Viaggio
-                </button>
+                    <h2 className="text-center mt-3 text-white">Destinazione</h2>
+                    <button className="ms-toggle-btn" onClick={() => navigate("/crea-viaggio")}>
+                        + Nuovo Viaggio
+                    </button>
                 </div>
                 <div className="card col my-3 ">
-                    <img src="https://picsum.photos/800/300" className="card-img-top" alt="..." />
+                    <img src={`http://localhost:5173/${viaggi[idViaggio].immagine}`} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{viaggi[idViaggio].meta}</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div className="d-flex">
+                            <div className="detail-card">
+                                <h4>Dettagli viaggio</h4>
+                                <span>Data di partenza: {viaggi[idViaggio].partenza}</span> <br />
+                                <span>Data di ritorno: {viaggi[idViaggio].ritorno}</span> <br />
+                                <span>Numero di partecipanti: {viaggi[idViaggio].partecipanti_id.length}</span> <br />
+                                <span>Tutor del gruppo: {viaggi[idViaggio].tutor}</span>
+                            </div>
+                            
+                        </div>
                     </div>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">{viaggi[idViaggio].partenza}</li>
@@ -63,7 +71,7 @@ function SingleTravel() {
                 </div>
 
 
-                <h2 className="mt-5 text-center">Partecipanti</h2>
+                <h2 className="mt-5 text-center text-white">Partecipanti</h2>
                 {/* card */}
                 <div className="container">
                     <div className="row row-cols-2 row-cols-lg-3 justify-content-around ">
@@ -75,7 +83,7 @@ function SingleTravel() {
                                 />
                             )
                         })}
-                        
+
                     </div>
                 </div>
 
